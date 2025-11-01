@@ -1,4 +1,5 @@
 # Lab-vLLM-Server
+
 Fast Local inference for 5+ users (under 15 secounds) using the llama3.2:3b model. Server SPECS: 3090ti, Epyc 7302 & 128GB DDR4 @ 2666MT/s 1Gb small home network
 
 <img width="3223" height="2102" alt="Screenshot from 2025-10-31 18-13-51" src="https://github.com/user-attachments/assets/ccdea431-b3e8-4295-8487-3484eb80a7dc" />
@@ -28,7 +29,7 @@ This project provides a Flask-based web server that acts as a proxy between user
 1. Clone the repository:
    ```bash
    git clone https://github.com/kylanj7/Local-vLLM-with-Ollama-Models.git
-   cd Lab-vLLM-Server
+   cd Local-vLLM-with-Ollama-Models
    ```
 
 2. Install dependencies:
@@ -46,20 +47,25 @@ This project provides a Flask-based web server that acts as a proxy between user
 
 ### Running the server
 
-Start the server with default settings (host 0.0.0.0, port 8080):
+Use the provided start script:
 ```bash
-python lab_vllm_server.py
+./start_proxy.sh
 ```
 
-Or with custom settings:
+Or run the Python script directly:
 ```bash
-python lab_vllm_server.py --host 127.0.0.1 --port 5000
+python ollama_proxy.py
+```
+
+For custom settings:
+```bash
+python ollama_proxy.py --host 127.0.0.1 --port 5000
 ```
 
 For production use, set a strong secret key:
 ```bash
 export SECRET_KEY="your-secure-random-string"
-python lab_vllm_server.py
+python ollama_proxy.py
 ```
 
 ### Accessing the web interface
