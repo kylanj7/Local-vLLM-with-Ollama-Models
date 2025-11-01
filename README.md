@@ -1,4 +1,6 @@
 # Lab-vLLM-Server
+Fast Local inference for 5+ users using the llama3.2:3b model on a 3090ti
+<img width="3223" height="2102" alt="Screenshot from 2025-10-31 18-13-51" src="https://github.com/user-attachments/assets/ccdea431-b3e8-4295-8487-3484eb80a7dc" />
 
 A simple web interface and API proxy for interacting with Ollama's local LLM server, featuring secure authentication.
 
