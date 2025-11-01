@@ -83,6 +83,17 @@ Simple and clean user interface:
 
 <img width="1147" height="868" alt="Screenshot from 2025-10-31 19-10-36" src="https://github.com/user-attachments/assets/e95da3b2-7494-4744-8e77-845179768cb4" />
 
+### Adding More Models to the vLLM Dropdown Menu
+
+Run "ollama list" after installing the Ollama model to see its exact specification:
+
+<img width="733" height="167" alt="Screenshot from 2025-11-01 15-43-51" src="https://github.com/user-attachments/assets/ffa813d6-5b22-41c3-889e-fc8b19909d28" />
+
+
+update the HTML section of "ollama_proxy.py" and add the new model:
+
+<img width="899" height="242" alt="Screenshot from 2025-10-31 20-18-04" src="https://github.com/user-attachments/assets/3123fee7-c07e-423b-a56e-06448406ac1d" />
+
 ### API Endpoints
 
 #### Generate text
@@ -108,6 +119,10 @@ GET /models
 Headers:
 - Authorization: Basic base64(username:password)
 
+#### Add More Models 
+
+
+
 ## Authentication
 
 The server supports two authentication methods:
@@ -126,16 +141,6 @@ This implementation includes several security improvements:
 - Proper login/logout functionality
 - Support for both web and API authentication methods
 - Role-based user system (admin/user roles)
-
-## Future Improvements
-
-For production deployment, consider:
-- Moving user data to a proper database
-- Implementing user registration and management
-- Adding HTTPS support
-- Implementing password reset functionality
-- Adding rate limiting for API calls
-- Implementing CSRF protection
 
 ## License
 
