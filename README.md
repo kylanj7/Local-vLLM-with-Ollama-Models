@@ -76,9 +76,11 @@ http://localhost:8080/
 ```
 Simple and clean user interface:
 
-<img width="1147" height="868" alt="Screenshot from 2025-10-31 19-10-36" src="https://github.com/user-attachments/assets/e95da3b2-7494-4744-8e77-845179768cb4" />
+<img width="1147" height="868" alt="Screenshot from 2025-10-31 19-11-53" src="https://github.com/user-attachments/assets/4b0a7a87-9719-4595-9583-f28fdf7c660e" />
 
 You will be prompted with a login page. Enter your username and password to access the interface.
+
+<img width="1147" height="868" alt="Screenshot from 2025-10-31 19-10-36" src="https://github.com/user-attachments/assets/e95da3b2-7494-4744-8e77-845179768cb4" />
 
 ### API Endpoints
 
