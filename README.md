@@ -86,26 +86,7 @@ You will be prompted with a login page. Enter your username and password to acce
 
 #### Generate text
 ```
-POST /generate
-```
-Headers:
-- Content-Type: application/json
-- Authorization: Basic base64(username:password)
-
-Body:
-```json
-{
-  "prompt": "Your prompt text here",
-  "model": "model_name"
-}
-```
-
-#### List available models
-```
-GET /models
-```
-Headers:
-- Authorization: Basic base64(username:password)
+Type your text into the prompt box
 
 ## Authentication
 
