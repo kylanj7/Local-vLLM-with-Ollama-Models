@@ -106,4 +106,4 @@ The server uses basic authentication. Users are currently defined in the `USERS`
 
 ## License
 
-[Specify your license here]
+MIT License
