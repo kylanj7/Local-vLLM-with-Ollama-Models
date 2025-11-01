@@ -1,25 +1,23 @@
-BETA TESTING PHASE
-
 # Ollama Proxy Server
-Running 5 simultaneous sessions with each user selecting LLama3.2:3b local, all prpmpts processed in under 15 secounds using a 3090ti, Epyc 7302 & 128GB of DDR4 2666MT/s
 
-<img width="3223" height="2102" alt="Screenshot from 2025-10-31 18-13-40" src="https://github.com/user-attachments/assets/5df60658-099b-4419-ad00-d5ed8d8551d7" />
+A simple web interface and API proxy for interacting with Ollama's local LLM server, featuring secure authentication.
 
-A simple web interface and API proxy for interacting with Ollama's local LLM server.
-Will run 
 ## Overview
 
 This project provides a Flask-based web server that acts as a proxy between users and a locally running Ollama instance. It offers:
 
 - A clean web interface for sending prompts to Ollama models
-- Basic authentication for multiple users
+- Secure user authentication with login page and password hashing
+- Session management for browser-based access
 - API endpoints for generating text and listing available models
+- Support for both web browser and API authentication methods
 
 ## Requirements
 
 - Python 3.6+
 - Flask
 - Requests
+- Werkzeug (for password hashing)
 - Ollama installed and running on the same machine
 
 ## Installation
@@ -47,22 +45,28 @@ This project provides a Flask-based web server that acts as a proxy between user
 
 Start the server with default settings (host 0.0.0.0, port 8080):
 ```bash
-python ollama_proxy.py
+python ollama_proxy_secure.py
 ```
 
 Or with custom settings:
 ```bash
-python ollama_proxy.py --host 127.0.0.1 --port 5000
+python ollama_proxy_secure.py --host 127.0.0.1 --port 5000
+```
+
+For production use, set a strong secret key:
+```bash
+export SECRET_KEY="your-secure-random-string"
+python ollama_proxy_secure.py
 ```
 
 ### Accessing the web interface
 
 Open a browser and navigate to:
 ```
-http://localhost:8080/?username=USERNAME&password=PASSWORD
+http://localhost:8080/
 ```
 
-Replace `USERNAME` and `PASSWORD` with valid credentials from the predefined user list.
+You will be prompted with a login page. Enter your username and password to access the interface.
 
 ### API Endpoints
 
@@ -82,8 +86,6 @@ Body:
 }
 ```
 
-
-
 #### List available models
 ```
 GET /models
@@ -93,17 +95,33 @@ Headers:
 
 ## Authentication
 
-The server uses basic authentication. Users are currently defined in the `USERS` dictionary in the script. For production use, it's recommended to implement a more secure authentication system.
+The server supports two authentication methods:
 
-## Security Considerations
+1. **Web Browser Access**: Form-based login with secure session management
+2. **API Access**: HTTP Basic Authentication for programmatic access
 
-- Current authentication is basic and stores passwords in plain text
-- For production use, consider:
-  - Using environment variables for credentials
-  - Implementing proper password hashing
-  - Adding HTTPS support
-  - Restricting access to trusted networks
+Passwords are securely stored using Werkzeug's password hashing functions. The default user accounts are defined in the code, but for production use, you should implement a proper user database.
+
+## Security Enhancements
+
+This implementation includes several security improvements:
+- Password hashing using Werkzeug's security functions
+- Session-based authentication for web interface
+- Random secret key generation (or from environment variable)
+- Proper login/logout functionality
+- Support for both web and API authentication methods
+- Role-based user system (admin/user roles)
+
+## Future Improvements
+
+For production deployment, consider:
+- Moving user data to a proper database
+- Implementing user registration and management
+- Adding HTTPS support
+- Implementing password reset functionality
+- Adding rate limiting for API calls
+- Implementing CSRF protection
 
 ## License
 
-MIT License
+[Specify your license here]
