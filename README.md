@@ -1,6 +1,6 @@
 # Lab-vLLM-Server
 
-Fast Local inference for 5+ users (under 15 seconds) using the llama3.2:3b model. Server SPECS: 3090ti, Epyc 7302 & 128GB DDR4 @ 2666MT/s 1Gb small home network
+Fast Local GPU inference for 5+ users (under 15 seconds) using the llama3.2:3b model. Server SPECS: 3090ti (24GB VRAM), Epyc 7302 & 128GB DDR4 @ 2666MT/s 1Gb small home network
 
 <img width="3223" height="2102" alt="Screenshot from 2025-10-31 18-13-51" src="https://github.com/user-attachments/assets/ccdea431-b3e8-4295-8487-3484eb80a7dc" />
 
