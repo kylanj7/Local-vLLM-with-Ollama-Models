@@ -1,7 +1,7 @@
 BETA TESTING PHASE
 
 # Ollama Proxy Server
-Running 5 simultaneous sessions with each user selecting LLama3.2:3b local.  
+Running 5 simultaneous sessions with each user selecting LLama3.2:3b local, all prpmpts processed in under 15 secounds using a 3090ti, Epyc 7302 & 128GB of DDR4 2666MT/s
 
 <img width="3223" height="2102" alt="Screenshot from 2025-10-31 18-13-40" src="https://github.com/user-attachments/assets/5df60658-099b-4419-ad00-d5ed8d8551d7" />
 
