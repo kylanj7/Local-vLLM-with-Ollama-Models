@@ -29,7 +29,7 @@ This project provides a Flask-based web server that acts as a proxy between user
 1. Clone the repository:
    ```bash
    git clone https://github.com/kylanj7/Lad-LLM-Proxy.git
-   cd Local-vLLM-with-Ollama-Models
+   cd Lab-LLM-Proxy
    ```
 
 2. Install dependencies:
@@ -83,7 +83,7 @@ Simple and clean user interface:
 
 <img width="1147" height="868" alt="Screenshot from 2025-10-31 19-10-36" src="https://github.com/user-attachments/assets/e95da3b2-7494-4744-8e77-845179768cb4" />
 
-### Adding More Models to the vLLM Dropdown Menu
+### Adding More Models to the LLM Dropdown Menu
 
 Run "ollama list" after installing the Ollama model to see its exact specification:
 
