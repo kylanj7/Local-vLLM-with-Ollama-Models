@@ -144,10 +144,10 @@ This implementation includes several security improvements:
 
 ## Future Changes 
 
-Create custom LLM training datasets to fit the labs specifications (answer sets for specific server models, and specifications). Include obscure details and documents for networking devices (Extreme OS versions)
-Test trained model in troubleshooting scenarios
-take user feedback to imporove the model
-
+Create custom LLM training datasets to specifically fit the Intel lab specifications 
+Gather more data (Intel Confidential)
+RAG (Retrieval-Augmented Generation) Implementation for reasonalble performance on smaller models (3b parameters)
+smaller models used for CPU inference and multiple user unterations. 
 ## License
 
 MIT License - See [LICENSE](LICENSE) file for details.
