@@ -142,6 +142,12 @@ This implementation includes several security improvements:
 - Support for both web and API authentication methods
 - Role-based user system (admin/user roles)
 
+## Future Changes 
+
+Create custom LLM training datasets to fit the labs specifications (answer sets for specific server models, and specifications). Include obscure details and documents for networking devices (Extreme OS versions)
+Test trained model in troubleshooting scenarios
+take user feedback to imporove the model
+
 ## License
 
 MIT License - See [LICENSE](LICENSE) file for details.
