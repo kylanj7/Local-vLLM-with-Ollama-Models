@@ -4,7 +4,7 @@
 echo "Installing Lab-vLLM-Server..."
 
 # Create directory structure
-mkdir -p ~/Lab-vLLM-Server
+mkdir -p ~/Lab-LLM-Server
 
 # Make sure Ollama is running (if installed)
 if command -v systemctl &> /dev/null && systemctl is-active --quiet ollama; then
@@ -23,7 +23,7 @@ echo "Installing Python dependencies..."
 pip install flask requests werkzeug
 
 # Clone repository if it doesn't exist
-if [ ! -d "Lab-vLLM-Server" ]; then
+if [ ! -d "Lab-LLM-Server" ]; then
     echo "Cloning repository..."
     git clone https://github.com/kylanj7/Lab-LLM-Proxy.git Lab-vLLM-Server
     cd Lab-LLM-Server
