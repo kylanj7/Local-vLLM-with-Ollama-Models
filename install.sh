@@ -25,18 +25,18 @@ pip install flask requests werkzeug
 # Clone repository if it doesn't exist
 if [ ! -d "Lab-vLLM-Server" ]; then
     echo "Cloning repository..."
-    git clone https://github.com/kylanj7/Local-vLLM-with-Ollama-Models.git Lab-vLLM-Server
-    cd Lab-vLLM-Server
+    git clone https://github.com/kylanj7/Lab-LLM-Proxy.git Lab-vLLM-Server
+    cd Lab-LLM-Server
 else
     echo "Repository already exists, updating..."
-    cd Lab-vLLM-Server
+    cd Lab-LLM-Server
     git pull origin main
 fi
 
-echo "Lab-Server has been installed to ~/Lab-vLLM-Server/"
+echo "Lab-Server has been installed to ~/Lab-LLM-Server/"
 echo ""
 echo "To start the server, run:"
-echo "cd ~/Lab-Server && python lab_vllm_server.py"
+echo "cd ~/Lab-LLM-Server && python lab_vllm_server.py"
 echo ""
 echo "Then visit http://localhost:8080 in your browser."
 echo ""
