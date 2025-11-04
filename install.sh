@@ -36,7 +36,7 @@ fi
 echo "Lab-Server has been installed to ~/Lab-LLM-Server/"
 echo ""
 echo "To start the server, run:"
-echo "cd ~/Lab-LLM-Server && python lab_vllm_server.py"
+echo "cd ~/Lab-LLM-Server && python ollama_proxy.py"
 echo ""
 echo "Then visit http://localhost:8080 in your browser."
 echo ""
